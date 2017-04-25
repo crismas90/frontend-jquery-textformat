@@ -1,10 +1,13 @@
 'use strict';
 let textArea = $(".message-field");
 let output = $(".message-formatted");
+function getFormat(value) {
+    return value.toLowerCase()
+                .trim()
+                .replace(/\s+/g, ' ');
+}
 textArea.on("input", function () {
     let value = textArea.val();
-    function textFormatting() {
-        return value.toLowerCase().trim().replace(/\s+/g, ' ');
-    }
-    output.text(textFormatting(value));
+    let textFormat = getFormat(value);
+    output.text(textFormat);
 });
