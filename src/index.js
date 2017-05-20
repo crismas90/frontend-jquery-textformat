@@ -8,6 +8,6 @@ function getFormattedText(value) {
 }
 textArea.on("input", function () {
     let value = textArea.val();
-    let textFormat = getFormat(value);
+    let textFormat = getFormattedText(value);
     output.text(textFormat);
 });
