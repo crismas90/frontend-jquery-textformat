@@ -1,7 +1,7 @@
 'use strict';
 let textArea = $(".message-field");
 let output = $(".message-formatted");
-function getFormat(value) {
+function getFormattedText(value) {
     return value.toLowerCase()
                 .trim()
                 .replace(/\s+/g, ' ');
